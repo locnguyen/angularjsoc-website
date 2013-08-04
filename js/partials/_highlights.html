@@ -32,7 +32,7 @@
                 <li ng-repeat="event in events">
                     {{event.name}}  / Yes: {{event.yes_rsvp_count}} / Maybe: {{event.maybe_rsvp_count}} / Waitlist: {{event.waitlist_count}}  / <a href="{{event.event_url}}">Meetup Link</a>
                     <br />
-                    {{event.time}}
+                    {{ event.time | date:'EEEE, MMMM d, y' }} at {{ event.time | date:'h:mm a' }}
                 </li>
             </ul>
         </div>
