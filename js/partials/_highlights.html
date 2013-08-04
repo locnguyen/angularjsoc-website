@@ -26,8 +26,15 @@
 </div>
 <div class="row gap">
     <div class="large-12 columns">
-        <div class="box1">
+        <div class="box1" ng-controller="UpcomingMeetups">
             <h2>Upcoming Meetups</h2>
+            <ul class="newevents">
+                <li ng-repeat="event in events">
+                    {{event.name}}  / Yes: {{event.yes_rsvp_count}} / Maybe: {{event.maybe_rsvp_count}} / Waitlist: {{event.waitlist_count}}  / <a href="{{event.event_url}}">Meetup Link</a>
+                    <br />
+                    {{event.time}}
+                </li>
+            </ul>
         </div>
     </div>
 </div>
