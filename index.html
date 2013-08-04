@@ -1,29 +1,108 @@
+
 <!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 
 <html lang="en" ng-app="angularjsOC">
   <head>
     <meta charset="utf-8">
-    <title>AngularJS OC</title>
-    <link rel="stylesheet" href="/css/angularjsoc.css" />
-  </head>
+  <meta name="viewport" content="width=device-width">
+  <title>AngularJS OC</title>
 
-  <body>
+  
+  <link rel="stylesheet" href="stylesheets/app.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <script src="javascripts/vendor/custom.modernizr.js"></script>
+
+</head>
+<body>
+  <div id="wrapper">
     <header>
-      <nav>
-        <ol class="top-nav">
-          <li><a href="/#/">home</a></li>
-          <li><a href="/#/about">about</a></li>
-          <li><a href="/#/announcements">announcements</a></li>
-          <li><a href="/#/presentations">presentations</a></li>
-          <li><a href="/#/contact">contact</a></li>
-        </ol>
+      <nav class="top-bar">
+        <ul class="title-area">
+          <!-- Title Area -->
+          <li class="name">
+            <h1><a href="#"></a></h1>
+          </li>
+          <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+        <section class="top-bar-section right">
+          <ul>
+                <li><a href="/#/">home</a></li>
+                <li><a href="/#/about">about</a></li>
+                <li><a href="/#/announcements">announcements</a></li>
+                <li><a href="/#/presentations">presentations</a></li>
+                <li><a href="/#/contact">contact</a></li>
+          </ul>
+        </section>
       </nav>
-
-      <h1>[logo] AngularJS OC</h1>
     </header>
-    <div ng-view></div>
+    <div id="main-content">
+      <div class="row">
+        <div class="large-8 small-8 columns">
+          <h1><img src="images/logo.jpg" alt="AngularJS OC Logo"> AngularJS <span class="orange">OC</span></h1>
+        </div>
+        <div class="large-3 small-3 columns">
+          <a href="http://www.meetup.com/AngularJS-OC/" class="button right">Join Us</a>
+        </div>
+      </div>
+      <div ng-view></div>
+    <div class="push"></div>
+  </div>
+</div>
+  <footer>
+    <div class="row">
+      <div class="large-3 columns">
+        <h4>Test</h4>
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+      </div>
+      <div class="large-3 columns">
+        <h4>Test</h4>
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
 
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-  <script src="/js/angularjsoc.js"></script>
-  </body>
+      </div>
+      <div class="large-3 columns">
+        <h4>Test</h4>
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+
+      </div>
+      <div class="large-3 columns">
+        <h4>Test</h4>
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>       
+      </div>
+    </div>
+  </footer>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="/js/angularjsoc.js"></script>
+    <script src="javascripts/foundation/foundation.js"></script>
+      <script src="javascripts/foundation/foundation.topbar.js"></script>
+  
+  
+  <script>
+    $(document).foundation();
+  </script>
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
 </html>
