@@ -1,0 +1,147 @@
+// Global Foundation Settings
+@import "settings";
+$row-width: emCalc(1200);
+$column-gutter: emCalc(30);
+$color1: #c5c5c5;
+$color2: #ff7900;
+$bg: $color2;
+$color3: #dd1b15;
+$fontstack: 'Open Sans', Helvetica Neue, Arial, Sans-serif;
+
+
+// Comment out this import if you don't want to use normalize
+@import "normalize";
+
+// Comment out this import if you are customizing you imports below
+// @import "foundation";
+
+// Import specific parts of Foundation by commenting the import "foundation"
+// and uncommenting what you want below. You must uncomment the following if customizing
+
+@import "foundation/components/global"; // *always required
+@import "foundation/components/grid";
+
+//
+// Use this grid if you want to start using the new Foundation 5 grid early.
+// It will change breakpoints to min-width: 640px and 1024px.
+//
+// @import "foundation/components/grid-5";
+//
+
+// @import "foundation/components/visibility";
+// @import "foundation/components/block-grid";
+@import "foundation/components/type";
+@import "foundation/components/buttons";
+// @import "foundation/components/forms"; // *requires components/buttons
+// @import "foundation/components/custom-forms"; // *requires components/buttons, components/forms
+// @import "foundation/com2ponents/button-groups"; // *requires components/buttons
+// @import "foundation/components/dropdown-buttons"; // *requires components/buttons
+// @import "foundation/components/split-buttons"; // *requires components/buttons
+// @import "foundation/components/flex-video";
+// @import "foundation/components/section";
+@import "foundation/components/top-bar";  // *requires components/grid
+// @import "foundation/components/orbit";
+// @import "foundation/components/reveal";
+// @import "foundation/components/joyride";
+// @import "foundation/components/clearing";
+// @import "foundation/components/alert-boxes";
+// @import "foundation/components/breadcrumbs";
+// @import "foundation/components/keystrokes";
+// @import "foundation/components/labels";
+// @import "foundation/components/inline-lists";
+// @import "foundation/components/pagination";
+// @import "foundation/components/panels";
+// @import "foundation/components/pricing-tables";
+// @import "foundation/components/progress-bars";
+// @import "foundation/components/side-nav";
+// @import "foundation/components/sub-nav";
+// @import "foundation/components/switch";
+// @import "foundation/components/magellan";
+// @import "foundation/components/tables";
+// @import "foundation/components/thumbs";
+// @import "foundation/components/tooltips";
+// @import "foundation/components/dropdown";
+
+html, body {
+	height: 100%;
+}
+#wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	position: relative;
+	margin-bottom: -200px;
+}
+.push {
+	height: 200px;
+}
+footer {
+	padding: 20px;
+	height: 200px;
+	width: 100%;
+	background-color: orange;
+}
+
+.button {
+	@include button(0.75em, $color2)
+}
+.cf:before,
+.cf:after {
+    content: " "; 
+    display: table; 
+}
+
+.cf:after {
+    clear: both;
+}
+
+
+body {
+	font-family: $fontstack;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: $fontstack;
+	font-weight: 200;
+}
+nav.top-bar, .top-bar-section li a:not(.button){
+	background-color: #555;
+}
+nav.top-bar.expanded, .top-bar-section ul, .top-bar-section ul li > a {
+	background-color: #555;
+}
+.top-bar-section ul li > a:hover {
+	background-color: #888;
+}
+.orange {
+	color: $color2;
+}
+.box {
+	padding: 0 emCalc(20) 2.5em emCalc(20);
+	color: #fff;
+	line-height: 1.8em;
+	position: relative;
+	h2 {
+		color: #fff;
+		margin: 0 0 emCalc(2);
+	}
+	i {
+		position: absolute;
+		bottom: emCalc(8);
+		right: emCalc(8);
+	}
+}
+.box1 {
+	@extend .box;
+	background: #c5c5c5;
+}
+.box2 {
+	@extend .box;
+	background: #ff7900;
+}
+.box3 {
+	@extend .box;
+	background: #dd1b15;
+}
+.gap {
+	margin-top: emCalc(30);
+}
