@@ -1,4 +1,4 @@
-var angularjsOC = angular.module('angularjsOC', []);
+var angularjsOC = angular.module('angularjsOC', ['filters']);
 
 angularjsOC.config(['$routeProvider', function($routeProvider) {
   $routeProvider.
@@ -10,3 +10,10 @@ angularjsOC.config(['$routeProvider', function($routeProvider) {
     when('/contact', { templateUrl: '/js/partials/contact.html' }).
     otherwise({ redirectTo: '/' });
 }]);
+
+angular.module('filters', []).
+    filter('removehtml', function () {
+        return function (text) {
+                return String(text).replace(/<\/?([a-z][a-z0-9]*)\b[^>]*>/gi, '').substring(0,250)+'...';
+    }
+});
