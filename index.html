@@ -49,24 +49,29 @@
         </div>
       </div>
       <div ng-view></div>
-    <div class="push"></div>
+      <div class="push"></div>
+    </div>
   </div>
-</div>
   <footer>
     <div ng-include="'/js/partials/footer.html'"></div>
   </footer>
-    <script>
+  <script>
       document.write('<script src=' +
       ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
       '.js><\/script>')
-    </script>
-      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-      <script src="/js/angularjsoc.js"></script>
-      <script src="/js/controllers.js"></script>
-      <script src="/js/foundation/foundation.js"></script>
-      <script src="/js/foundation/foundation.topbar.js"></script>
-  
+  </script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 
+  <!-- Start Angular assets -->
+  <script src="/js/angularjsoc.js"></script>
+
+  <script src="/js/services/meetupService.js"></script>
+
+  <script src="/js/directives/upcomingMeetups.js"></script>
+  <!-- End Angular assets -->
+
+  <script src="/js/foundation/foundation.js"></script>
+  <script src="/js/foundation/foundation.topbar.js"></script>
   <script>
     $(document).foundation();
   </script>

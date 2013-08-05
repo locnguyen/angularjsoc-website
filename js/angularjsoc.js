@@ -1,6 +1,14 @@
-var angularjsOC = angular.module('angularjsOC', ['filters']);
+'use strict';
 
-angularjsOC.config(['$routeProvider', function($routeProvider) {
+var angularjsOC = angularjsOC || {};
+
+angularjsOC.keys = {
+    meetup: '18224834563235331b1963378625522'
+}
+
+angularjsOC.app = angular.module('angularjsOC', ['filters']);
+
+angularjsOC.app.config(['$routeProvider', function($routeProvider) {
   $routeProvider.
     when('/', { templateUrl: '/js/partials/index.html' }).
     when('/getinvolved', { templateUrl: '/js/partials/getinvolved.html' }).
