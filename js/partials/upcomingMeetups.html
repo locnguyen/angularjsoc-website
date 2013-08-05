@@ -1,13 +1,28 @@
-<div>
-    <h2>Upcoming Meetups</h2>
-    <ul class="newevents">
-        <li ng-show="!events.length">There are currently no upcoming events.  <a href="http://www.meetup.com/AngularJS-OC/events/suggested/#">Suggest a Meetup</a></li>
-        <li ng-repeat="event in events">
-            <a href="{{event.event_url}}"><h4>{{event.name}}</h4></a>  Yes: {{event.yes_rsvp_count}} / Maybe: {{event.maybe_rsvp_count}} / Waitlist: {{event.waitlist_count}}
-            <br />
-            {{ event.time | date:'EEEE, MMMM d, y' }} at {{ event.time | date:'h:mm a' }}
-            <br />
-            {{event.description | truncate}} <a href="{{event.event_url}}">Read More</a>
-        </li>
-    </ul>
-</div>
+    <div class="row gap" ng-show="!events.length">
+        <div class="large-12 columns">
+            <div class="box1">
+            There are currently no upcoming events
+            </div>
+        </div>
+    </div>
+    <div class="row gap" ng-repeat="event in events">
+        <div class="large-8 columns">
+            <div class="box1">
+                 <a href="{{event.event_url}}"><h4>{{event.name}}</h4></a>  Yes: {{event.yes_rsvp_count}} / Maybe: {{event.maybe_rsvp_count}} / Waitlist: {{event.waitlist_count}}
+                <br />
+                {{ event.time | date:'EEEE, MMMM d, y' }} at {{ event.time | date:'h:mm a' }}
+                <br />
+                {{event.description | truncate}} <a href="{{event.event_url}}">Read More</a>
+            </div>
+        </div>
+        <div class="large-4 columns">
+            <div class="box2">
+                <h4>Location</h4>
+                <address>
+                {{event.venue.name}}<br />
+                {{event.venue.address_1}}<br />
+                {{event.venue.city}}, {{event.venue.state}}
+                </address>
+            </div>
+        </div>
+    </div>
