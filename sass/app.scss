@@ -65,6 +65,12 @@ $fontstack: 'Open Sans', Helvetica Neue, Arial, Sans-serif;
 html, body {
 	height: 100%;
 }
+a {
+	color: $color3;
+}
+a:hover {
+	color: darken($color3, 20%);
+}
 #wrapper {
 	min-height: 100%;
 	height: auto !important;
@@ -73,7 +79,7 @@ html, body {
 	margin-bottom: -200px;
 }
 .push {
-	height: 200px;
+	height: 230px;
 }
 footer {
 	padding: 20px;
@@ -144,4 +150,43 @@ nav.top-bar.expanded, .top-bar-section ul, .top-bar-section ul li > a {
 }
 .gap {
 	margin-top: emCalc(30);
+}
+#upcomingMeetups h2 {
+	margin: 0.5em 0 0;
+}
+.meetupdetails {
+	@extend .box;
+	padding: emCalc(10);
+	background-color: $color1;
+	.datetime, .rsvps {
+		font-size: 0.85em;
+		color: black;
+		font-weight: bold;
+		display: block;
+		line-height: 1em;
+		margin: 0 0 0.25em;
+	}
+	h4 {
+		margin: 0;
+	}
+	border-top: 4px solid #fff;
+}
+.meetuplocation {
+	@extent .box;
+	padding: emCalc(10) emCalc(10) 0;
+	background-color: $color2;
+	h4 {
+		margin: 0 0 0.25em;
+		color: #fff;
+	}
+	border-bottom: 5px solid $color3;
+	.button {
+		@include button(0.75em, $color3)
+	}
+}
+
+@media #{$small} { 
+	.meetuplocation {
+		border-top: 4px solid #fff;
+	}
 }

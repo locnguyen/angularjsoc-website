@@ -2288,6 +2288,16 @@ html, body {
 }
 
 /* line 68, ../sass/app.scss */
+a {
+  color: #dd1b15;
+}
+
+/* line 71, ../sass/app.scss */
+a:hover {
+  color: #80100c;
+}
+
+/* line 74, ../sass/app.scss */
 #wrapper {
   min-height: 100%;
   height: auto !important;
@@ -2296,12 +2306,12 @@ html, body {
   margin-bottom: -200px;
 }
 
-/* line 75, ../sass/app.scss */
+/* line 81, ../sass/app.scss */
 .push {
-  height: 200px;
+  height: 230px;
 }
 
-/* line 78, ../sass/app.scss */
+/* line 84, ../sass/app.scss */
 footer {
   padding: 20px;
   height: 200px;
@@ -2309,7 +2319,7 @@ footer {
   background-color: orange;
 }
 
-/* line 85, ../sass/app.scss */
+/* line 91, ../sass/app.scss */
 .button {
   border-style: solid;
   border-width: 1px;
@@ -2340,84 +2350,159 @@ footer {
   color: white;
 }
 
-/* line 89, ../sass/app.scss */
+/* line 95, ../sass/app.scss */
 .cf:before,
 .cf:after {
   content: " ";
   display: table;
 }
 
-/* line 94, ../sass/app.scss */
+/* line 100, ../sass/app.scss */
 .cf:after {
   clear: both;
 }
 
-/* line 99, ../sass/app.scss */
+/* line 105, ../sass/app.scss */
 body {
   font-family: "Open Sans", Helvetica Neue, Arial, Sans-serif;
 }
 
-/* line 102, ../sass/app.scss */
+/* line 108, ../sass/app.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", Helvetica Neue, Arial, Sans-serif;
   font-weight: 200;
 }
 
-/* line 106, ../sass/app.scss */
+/* line 112, ../sass/app.scss */
 nav.top-bar, .top-bar-section li a:not(.button) {
   background-color: #555;
 }
 
-/* line 109, ../sass/app.scss */
+/* line 115, ../sass/app.scss */
 nav.top-bar.expanded, .top-bar-section ul, .top-bar-section ul li > a {
   background-color: #555;
 }
 
-/* line 112, ../sass/app.scss */
+/* line 118, ../sass/app.scss */
 .top-bar-section ul li > a:hover {
   background-color: #888;
 }
 
-/* line 115, ../sass/app.scss */
+/* line 121, ../sass/app.scss */
 .orange {
   color: #ff7900;
 }
 
-/* line 118, ../sass/app.scss */
-.box, .box1, .box2, .box3 {
+/* line 124, ../sass/app.scss */
+.box, .box1, .box2, .box3, .meetupdetails {
   padding: 0 1.25em 2.5em 1.25em;
   color: #fff;
   line-height: 1.8em;
   position: relative;
 }
-/* line 123, ../sass/app.scss */
-.box h2, .box1 h2, .box2 h2, .box3 h2 {
+/* line 129, ../sass/app.scss */
+.box h2, .box1 h2, .box2 h2, .box3 h2, .meetupdetails h2 {
   color: #fff;
   margin: 0 0 0.125em;
 }
-/* line 127, ../sass/app.scss */
-.box i, .box1 i, .box2 i, .box3 i {
+/* line 133, ../sass/app.scss */
+.box i, .box1 i, .box2 i, .box3 i, .meetupdetails i {
   position: absolute;
   bottom: 0.5em;
   right: 0.5em;
 }
 
-/* line 133, ../sass/app.scss */
+/* line 139, ../sass/app.scss */
 .box1 {
   background: #c5c5c5;
 }
 
-/* line 137, ../sass/app.scss */
+/* line 143, ../sass/app.scss */
 .box2 {
   background: #ff7900;
 }
 
-/* line 141, ../sass/app.scss */
+/* line 147, ../sass/app.scss */
 .box3 {
   background: #dd1b15;
 }
 
-/* line 145, ../sass/app.scss */
+/* line 151, ../sass/app.scss */
 .gap {
   margin-top: 1.875em;
+}
+
+/* line 154, ../sass/app.scss */
+#upcomingMeetups h2 {
+  margin: 0.5em 0 0;
+}
+
+/* line 157, ../sass/app.scss */
+.meetupdetails {
+  padding: 0.625em;
+  background-color: #c5c5c5;
+  border-top: 4px solid #fff;
+}
+/* line 161, ../sass/app.scss */
+.meetupdetails .datetime, .meetupdetails .rsvps {
+  font-size: 0.85em;
+  color: black;
+  font-weight: bold;
+  display: block;
+  line-height: 1em;
+  margin: 0 0 0.25em;
+}
+/* line 169, ../sass/app.scss */
+.meetupdetails h4 {
+  margin: 0;
+}
+
+/* line 174, ../sass/app.scss */
+.meetuplocation {
+  @extent .box;
+  padding: 0.625em 0.625em 0;
+  background-color: #ff7900;
+  border-bottom: 5px solid #dd1b15;
+}
+/* line 178, ../sass/app.scss */
+.meetuplocation h4 {
+  margin: 0 0 0.25em;
+  color: #fff;
+}
+/* line 183, ../sass/app.scss */
+.meetuplocation .button {
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0 0 1.25em;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  padding-top: 0.75em;
+  padding-right: 1.5em;
+  padding-bottom: 0.8125em;
+  padding-left: 1.5em;
+  font-size: 1em;
+  background-color: #dd1b15;
+  border-color: #ae1511;
+  color: white;
+}
+/* line 122, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_buttons.scss */
+.meetuplocation .button:hover, .meetuplocation .button:focus {
+  background-color: #ae1511;
+}
+/* line 133, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_buttons.scss */
+.meetuplocation .button:hover, .meetuplocation .button:focus {
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 189, ../sass/app.scss */
+  .meetuplocation {
+    border-top: 4px solid #fff;
+  }
 }
