@@ -10,6 +10,7 @@
             <div class="meetupdetails">
                  <h4><a href="{{event.event_url}}" target="_blank">{{event.name}}</a></h4>
                 <span class="datetime">{{ event.time | date:'EEEE, MMMM d, y' }} at {{ event.time | date:'h:mm a' }}</span>
+                <span class="rsvps">{{event.yes_rsvp_count}} Attending, {{event.waitlist_count}} on Waitlist</span>
                 {{event.description | truncate}} <a href="{{event.event_url}}" target="_blank">Read More</a>
             </div>
         </div>

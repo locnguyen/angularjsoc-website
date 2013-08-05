@@ -2447,29 +2447,34 @@ nav.top-bar.expanded, .top-bar-section ul, .top-bar-section ul li > a {
 .meetupdetails .datetime, .meetupdetails .rsvps {
   font-size: 0.85em;
   color: black;
-  font-weight: bold;
   display: block;
   line-height: 1em;
   margin: 0 0 0.25em;
+  padding-left: 0.3125em;
+  border-left: 0.625em solid #acacac;
 }
-/* line 169, ../sass/app.scss */
+/* line 170, ../sass/app.scss */
+.meetupdetails .datetime {
+  font-weight: bold;
+}
+/* line 173, ../sass/app.scss */
 .meetupdetails h4 {
   margin: 0;
 }
 
-/* line 174, ../sass/app.scss */
+/* line 178, ../sass/app.scss */
 .meetuplocation {
   @extent .box;
   padding: 0.625em 0.625em 0;
   background-color: #ff7900;
   border-bottom: 5px solid #dd1b15;
 }
-/* line 178, ../sass/app.scss */
+/* line 182, ../sass/app.scss */
 .meetuplocation h4 {
   margin: 0 0 0.25em;
   color: #fff;
 }
-/* line 183, ../sass/app.scss */
+/* line 187, ../sass/app.scss */
 .meetuplocation .button {
   border-style: solid;
   border-width: 1px;
@@ -2501,7 +2506,7 @@ nav.top-bar.expanded, .top-bar-section ul, .top-bar-section ul li > a {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 189, ../sass/app.scss */
+  /* line 193, ../sass/app.scss */
   .meetuplocation {
     border-top: 4px solid #fff;
   }

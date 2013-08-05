@@ -161,10 +161,14 @@ nav.top-bar.expanded, .top-bar-section ul, .top-bar-section ul li > a {
 	.datetime, .rsvps {
 		font-size: 0.85em;
 		color: black;
-		font-weight: bold;
 		display: block;
 		line-height: 1em;
 		margin: 0 0 0.25em;
+		padding-left: emCalc(5);
+		border-left: emCalc(10) solid darken($color1, 10%);
+	}
+	.datetime {
+		font-weight: bold;
 	}
 	h4 {
 		margin: 0;
