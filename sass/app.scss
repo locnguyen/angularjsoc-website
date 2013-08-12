@@ -76,16 +76,27 @@ a:hover {
 	height: auto !important;
 	height: 100%;
 	position: relative;
-	margin-bottom: -200px;
+	margin-bottom: -150px;
 }
 .push {
-	height: 230px;
+	height: 200px;
 }
 footer {
+	position: absolute;
+	z-index: 99;
 	padding: 20px;
-	height: 200px;
+	height: 150px;
 	width: 100%;
 	background-color: orange;
+
+	.social {
+		line-height: 1;
+		li {
+		display: inline-block;
+		font-size: emCalc(30);
+		margin-left: emCalc(5);
+		}
+	}
 }
 
 .button {
