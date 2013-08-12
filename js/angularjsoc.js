@@ -6,12 +6,12 @@ angularjsOC.app = angular.module('angularjsOC', ['filters']);
 
 angularjsOC.app.config(['$routeProvider', function($routeProvider) {
   $routeProvider.
-    when('/', { templateUrl: '/js/partials/index.html' }).
-    when('/getinvolved', { templateUrl: '/js/partials/getinvolved.html' }).
-    when('/about', { templateUrl: '/js/partials/about.html' }).
-    when('/announcements', { templateUrl: '/js/partials/announcements.html' }).
-    when('/presentations', { templateUrl: '/js/partials/presentations.html' }).
-    when('/contact', { templateUrl: '/js/partials/contact.html' }).
+    when('/', { templateUrl: '/partials/index.html' }).
+    when('/getinvolved', { templateUrl: '/partials/getinvolved.html' }).
+    when('/about', { templateUrl: '/partials/about.html' }).
+    when('/announcements', { templateUrl: '/partials/announcements.html' }).
+    when('/presentations', { templateUrl: '/partials/presentations.html' }).
+    when('/contact', { templateUrl: '/partials/contact.html' }).
     otherwise({ redirectTo: '/' });
 }]);
 
