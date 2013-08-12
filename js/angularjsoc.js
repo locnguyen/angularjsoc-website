@@ -2,6 +2,16 @@
 
 var angularjsOC = angularjsOC || {};
 
+angularjsOC.settings = {
+  contact: 'angularjsoc@gmail.com',
+  social: {
+    fb: 'https://www.facebook.com/groups/146772135530385',
+    google: 'https://plus.google.com/u/0/103947436301596064094',
+    twitter: 'https://twitter.com/AngularJSOC',
+    youtube: ''
+  }
+};
+
 angularjsOC.app = angular.module('angularjsOC', ['filters']);
 
 angularjsOC.app.config(['$routeProvider', function($routeProvider) {
@@ -14,6 +24,8 @@ angularjsOC.app.config(['$routeProvider', function($routeProvider) {
     when('/contact', { templateUrl: '/partials/contact.html' }).
     otherwise({ redirectTo: '/' });
 }]);
+
+angularjsOC.app.value('settings', angularjsOC.settings);
 
 angular.module('filters', []).
     filter('removehtml', function () {

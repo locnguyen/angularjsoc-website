@@ -1,4 +1,6 @@
-angularjsOC.app.controller('BaseController', ['$scope', '$location', 'meetupService', function($scope, $location, meetupService) {
+angularjsOC.app.controller('BaseController', ['$scope', '$location', 'meetupService', 'settings', function($scope, $location, meetupService, settings) {
+
+  $scope.social = settings.social;
 
   $scope.loadfoundation = function() {
     $(document).foundation();
