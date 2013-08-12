@@ -2565,3 +2565,7 @@ nav.top-bar.expanded, .top-bar-section ul, .top-bar-section ul li > a {
     border-top: 4px solid #fff;
   }
 }
+
+.ng-cloak {
+  display: none;
+}
