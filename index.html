@@ -35,9 +35,11 @@
   </footer>
   <script>
       document.write('<script src=' +
-      ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
-      '.js><\/script>')
+      ('__proto__' in {} ? 'lib/zepto' : 'lib/jquery') + '.js><\/script>')
   </script>
+  <script src="/lib/foundation.js"></script>
+  <script src="/lib/foundation.topbar.js"></script>
+
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 
   <!-- Start Angular assets -->
@@ -47,8 +49,5 @@
 
   <script src="/js/directives/upcomingMeetups.js"></script>
   <!-- End Angular assets -->
-
-  <script src="/js/foundation/foundation.js"></script>
-  <script src="/js/foundation/foundation.topbar.js"></script>
 </body>
 </html>
