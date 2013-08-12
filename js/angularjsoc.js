@@ -44,3 +44,11 @@ angular.module('filters', []).
 
         };
     });
+
+angularjsOC.app.directive('foundation', [function() {
+    return {
+        link: function(scope, el) {
+            $(document).foundation();
+        }
+    }
+}]);
