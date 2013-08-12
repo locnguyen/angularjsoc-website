@@ -2,7 +2,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 
-<html lang="en" ng-app="angularjsOC" foundation>
+<html lang="en" ng-app="angularjsOC" ng-controller="BaseController">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -14,8 +14,8 @@
 </head>
 <body>
   <div id="wrapper">
-    <header ng-controller="headerCtrl">
-        <div ng-include src="'js/partials/header.html'" onload="loadfoundation()"></div>
+    <header>
+        <div ng-cloak ng-include src="'js/partials/header.html'" onload="loadfoundation()"></div>
     </header>
     <div id="main-content">
       <div class="row">
@@ -31,7 +31,7 @@
     </div>
   </div>
   <footer>
-    <div ng-include="'/js/partials/footer.html'"></div>
+    <div ng-cloak ng-include="'/js/partials/footer.html'"></div>
   </footer>
   <script>
       document.write('<script src=' +
@@ -44,7 +44,7 @@
 
   <!-- Start Angular assets -->
   <script src="/js/angularjsoc.js"></script>
-  <script src="/js/controllers/headerCtrl.js"></script>
+  <script src="/js/controllers/BaseController.js"></script>
   <script src="/js/services/meetupService.js"></script>
 
   <script src="/js/directives/upcomingMeetups.js"></script>
