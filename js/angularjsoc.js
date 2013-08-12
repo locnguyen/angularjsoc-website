@@ -12,7 +12,9 @@ angularjsOC.settings = {
   }
 };
 
-angularjsOC.app = angular.module('angularjsOC', ['filters']);
+angularjsOC.app = angular.module('angularjsOC', []);
+
+angularjsOC.app.value('settings', angularjsOC.settings);
 
 angularjsOC.app.config(['$routeProvider', function($routeProvider) {
   $routeProvider.
@@ -24,8 +26,6 @@ angularjsOC.app.config(['$routeProvider', function($routeProvider) {
     when('/contact', { templateUrl: '/partials/contact.html' }).
     otherwise({ redirectTo: '/' });
 }]);
-
-angularjsOC.app.value('settings', angularjsOC.settings);
 
 angularjsOC.app
     .filter('removehtml', function () {
