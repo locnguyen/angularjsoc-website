@@ -1,7 +1,11 @@
-angularjsOC.app.controller('BaseController', ['$scope', 'meetupService', function($scope, meetupService) {
+angularjsOC.app.controller('BaseController', ['$scope', '$location', 'meetupService', function($scope, $location, meetupService) {
 
   $scope.loadfoundation = function() {
     $(document).foundation();
+  }
+
+  $scope.currentPage = function() {
+    return $location.path();
   }
 
   meetupService.getGroupDetails().then(function(details) {

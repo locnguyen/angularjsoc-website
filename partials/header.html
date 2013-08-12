@@ -7,14 +7,15 @@
           <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
           <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
         </ul>
+                                     {{currentPage()}}
         <section class="top-bar-section right">
           <ul>
-                <li><a href="/#/">home</a></li>
-                <li><a href="/#/about">about</a></li>
-                <li><a href="/#/announcements">announcements</a></li>
-                <li><a href="/#/presentations">presentations</a></li>
-                <li><a href="/#/getinvolved">get involved</a></li>
-                <li><a href="/#/contact">contact</a></li>
+              <li><a href="/#/" ng-class="{'active': currentPage() == '/'}">home</a></li>
+              <li><a href="/#/about" ng-class="{'active': currentPage() == '/about'}">about</a></li>
+              <li><a href="/#/announcements" ng-class="{'active': currentPage() == '/announcements'}">announcements</a></li>
+              <li><a href="/#/presentations" ng-class="{'active': currentPage() == '/presentations'}">presentations</a></li>
+              <li><a href="/#/getinvolved" ng-class="{'active': currentPage() == '/getinvolved'}">get involved</a></li>
+              <li><a href="/#/contact" ng-class="{'active': currentPage() == '/contact'}">contact</a></li>
           </ul>
         </section>
       </nav>

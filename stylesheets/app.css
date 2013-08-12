@@ -2272,6 +2272,10 @@ button.large, .button.large {
     background: #090909;
     color: white;
   }
+
+  .top-bar-section ul li > a.active {
+    background-color: #c5c5c5;
+  }
   /* line 516, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_top-bar.scss */
   .no-js .top-bar-section ul li:active > a {
     background: #090909;
