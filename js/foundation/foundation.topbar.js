@@ -72,7 +72,7 @@
       var offst = this.outerHeight($('.top-bar, [data-topbar]'));
       $(this.scope)
         .off('.fndtn.topbar')
-        .on('click.fndtn.topbar', '.top-bar .toggle-topbar, [data-topbar] .toggle-topbar', function (e) {
+        .on('click.fndtn.topbar', '.top-bar .toggle-topbar, .top-bar-section ul li a, [data-topbar] .toggle-topbar', function (e) {
           var topbar = $(this).closest('.top-bar, [data-topbar]'),
               section = topbar.find('section, .section'),
               titlebar = topbar.children('ul').first();

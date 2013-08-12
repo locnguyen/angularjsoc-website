@@ -130,11 +130,6 @@ nav.top-bar.expanded, .top-bar-section ul, .top-bar-section ul li > a {
 		color: #fff;
 		margin: 0 0 emCalc(2);
 	}
-	i {
-		position: absolute;
-		bottom: emCalc(8);
-		right: emCalc(8);
-	}
 }
 .box1 {
 	@extend .box;
@@ -147,6 +142,33 @@ nav.top-bar.expanded, .top-bar-section ul, .top-bar-section ul li > a {
 .box3 {
 	@extend .box;
 	background: #dd1b15;
+}
+.highlights h2 + i {
+	font-size: emCalc(40);
+	float: right;
+	color: #646464;
+	margin: emCalc(5);
+}
+.hl1, .hl2, .hl3 {
+	padding-bottom: emCalc(2);
+}
+.hl1 {
+	border-bottom: emCalc(3) solid $color1;
+}
+.hl2 {
+	border-bottom: emCalc(3) solid $color2;
+}
+.hl3 {
+	border-bottom: emCalc(3) solid $color3;
+}
+.highlights .hl1 + i {
+	color: $color1;
+}
+.highlights .hl2 + i {
+	color: $color2;
+}
+.highlights .hl3 + i {
+	color: $color3;
 }
 .gap {
 	margin-top: emCalc(30);
@@ -183,7 +205,7 @@ nav.top-bar.expanded, .top-bar-section ul, .top-bar-section ul li > a {
 		margin: 0 0 0.25em;
 		color: #fff;
 	}
-	border-bottom: 5px solid $color3;
+	border-bottom: emCalc(5) solid $color3;
 	.button {
 		@include button(0.75em, $color3)
 	}

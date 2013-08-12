@@ -2405,45 +2405,82 @@ nav.top-bar.expanded, .top-bar-section ul, .top-bar-section ul li > a {
   color: #fff;
   margin: 0 0 0.125em;
 }
-/* line 133, ../sass/app.scss */
-.box i, .box1 i, .box2 i, .box3 i, .meetupdetails i {
-  position: absolute;
-  bottom: 0.5em;
-  right: 0.5em;
-}
 
-/* line 139, ../sass/app.scss */
+/* line 134, ../sass/app.scss */
 .box1 {
   background: #c5c5c5;
 }
 
-/* line 143, ../sass/app.scss */
+/* line 138, ../sass/app.scss */
 .box2 {
   background: #ff7900;
 }
 
-/* line 147, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 .box3 {
   background: #dd1b15;
 }
 
-/* line 151, ../sass/app.scss */
+/* line 146, ../sass/app.scss */
+.highlights h2 + i {
+  font-size: 2.5em;
+  float: right;
+  color: #646464;
+  margin: 0.3125em;
+}
+
+/* line 152, ../sass/app.scss */
+.hl1, .hl2, .hl3 {
+  padding-bottom: 0.125em;
+}
+
+/* line 155, ../sass/app.scss */
+.hl1 {
+  border-bottom: 0.1875em solid #c5c5c5;
+}
+
+/* line 158, ../sass/app.scss */
+.hl2 {
+  border-bottom: 0.1875em solid #ff7900;
+}
+
+/* line 161, ../sass/app.scss */
+.hl3 {
+  border-bottom: 0.1875em solid #dd1b15;
+}
+
+/* line 164, ../sass/app.scss */
+.highlights .hl1 + i {
+  color: #c5c5c5;
+}
+
+/* line 167, ../sass/app.scss */
+.highlights .hl2 + i {
+  color: #ff7900;
+}
+
+/* line 170, ../sass/app.scss */
+.highlights .hl3 + i {
+  color: #dd1b15;
+}
+
+/* line 173, ../sass/app.scss */
 .gap {
   margin-top: 1.875em;
 }
 
-/* line 154, ../sass/app.scss */
+/* line 176, ../sass/app.scss */
 #upcomingMeetups h2 {
   margin: 0.5em 0 0;
 }
 
-/* line 157, ../sass/app.scss */
+/* line 179, ../sass/app.scss */
 .meetupdetails {
   padding: 0.625em;
   background-color: #c5c5c5;
   border-top: 4px solid #fff;
 }
-/* line 161, ../sass/app.scss */
+/* line 183, ../sass/app.scss */
 .meetupdetails .datetime, .meetupdetails .rsvps {
   font-size: 0.85em;
   color: black;
@@ -2453,28 +2490,28 @@ nav.top-bar.expanded, .top-bar-section ul, .top-bar-section ul li > a {
   padding-left: 0.3125em;
   border-left: 0.625em solid #acacac;
 }
-/* line 170, ../sass/app.scss */
+/* line 192, ../sass/app.scss */
 .meetupdetails .datetime {
   font-weight: bold;
 }
-/* line 173, ../sass/app.scss */
+/* line 195, ../sass/app.scss */
 .meetupdetails h4 {
   margin: 0;
 }
 
-/* line 178, ../sass/app.scss */
+/* line 200, ../sass/app.scss */
 .meetuplocation {
   @extent .box;
   padding: 0.625em 0.625em 0;
   background-color: #ff7900;
-  border-bottom: 5px solid #dd1b15;
+  border-bottom: 0.3125em solid #dd1b15;
 }
-/* line 182, ../sass/app.scss */
+/* line 204, ../sass/app.scss */
 .meetuplocation h4 {
   margin: 0 0 0.25em;
   color: #fff;
 }
-/* line 187, ../sass/app.scss */
+/* line 209, ../sass/app.scss */
 .meetuplocation .button {
   border-style: solid;
   border-width: 1px;
@@ -2506,7 +2543,7 @@ nav.top-bar.expanded, .top-bar-section ul, .top-bar-section ul li > a {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 193, ../sass/app.scss */
+  /* line 215, ../sass/app.scss */
   .meetuplocation {
     border-top: 4px solid #fff;
   }
