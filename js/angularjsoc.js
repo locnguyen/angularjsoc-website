@@ -27,15 +27,13 @@ angularjsOC.app.config(['$routeProvider', function($routeProvider) {
 
 angularjsOC.app.value('settings', angularjsOC.settings);
 
-angular.module('filters', []).
-    filter('removehtml', function () {
+angularjsOC.app
+    .filter('removehtml', function () {
         return function (text) {
-                return String(text).replace(/<\/?([a-z][a-z0-9]*)\b[^>]*>/gi, '').substring(0,250)+'...';
-    }
-});
-
-angular.module('filters', []).
-    filter('truncate', function () {
+            return String(text).replace(/<\/?([a-z][a-z0-9]*)\b[^>]*>/gi, '').substring(0,250)+'...';
+        }
+    })
+    .filter('truncate', function () {
         return function (text, length, end) {
             if (isNaN(length))
                 length = 250;
@@ -50,7 +48,7 @@ angular.module('filters', []).
                 return String(text).replace(/<\/?([a-z][a-z0-9]*)\b[^>]*>/gi, '').substring(0, length-end.length) + end;
             }
 
-        };
+        }
     });
 
 angularjsOC.app.directive('foundation', [function() {
