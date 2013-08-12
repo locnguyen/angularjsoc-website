@@ -14,27 +14,8 @@
 </head>
 <body>
   <div id="wrapper">
-    <header>
-      <nav class="top-bar">
-        <ul class="title-area">
-          <!-- Title Area -->
-          <li class="name">
-            <h1><a href="#"></a></h1>
-          </li>
-          <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-        </ul>
-        <section class="top-bar-section right">
-          <ul>
-                <li><a href="/#/">home</a></li>
-                <li><a href="/#/about">about</a></li>
-                <li><a href="/#/announcements">announcements</a></li>
-                <li><a href="/#/presentations">presentations</a></li>
-                <li><a href="/#/getinvolved">get involved</a></li>
-                <li><a href="/#/contact">contact</a></li>
-          </ul>
-        </section>
-      </nav>
+    <header ng-controller="headerCtrl">
+        <div ng-include src="'js/partials/header.html'" onload="loadfoundation()"></div>
     </header>
     <div id="main-content">
       <div class="row">
@@ -61,7 +42,7 @@
 
   <!-- Start Angular assets -->
   <script src="/js/angularjsoc.js"></script>
-
+  <script src="/js/controllers/headerCtrl.js"></script>
   <script src="/js/services/meetupService.js"></script>
 
   <script src="/js/directives/upcomingMeetups.js"></script>
