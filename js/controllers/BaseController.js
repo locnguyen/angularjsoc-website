@@ -12,7 +12,6 @@ angularjsOC.app.controller('BaseController', ['$scope', '$location', 'meetupServ
 
   meetupService.getGroupDetails().then(function(details) {
     $scope.groupDetails = details;
-    console.log(details);
   });
 
   // Not used anywhere right now. It's a big response so we should
