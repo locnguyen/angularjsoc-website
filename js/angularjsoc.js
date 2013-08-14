@@ -4,11 +4,17 @@ var angularjsOC = angularjsOC || {};
 
 angularjsOC.settings = {
   contact: 'angularjsoc@gmail.com',
+  googleApiKey: 'AIzaSyDKBBD3LJwwgWInHsE3zG7NK5-TkQ9u_ok',
+  location: {
+    lat: '33.7400016784668',
+    lon: '-117.81999969482422'
+  },
   social: {
     fb: 'https://www.facebook.com/groups/146772135530385',
     google: 'https://plus.google.com/u/0/103947436301596064094',
     twitter: 'https://twitter.com/AngularJSOC',
-    youtube: ''
+    youtube: '',
+    meetup: 'http://www.meetup.com/AngularJS-OC'
   }
 };
 

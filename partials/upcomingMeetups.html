@@ -1,32 +1,31 @@
-    <div class="row" ng-show="!events.length">
-        <div class="large-12 columns">
-            <div class="meetupdetails">
-            <h3>There are currently no upcoming events.</h3>
-                <div class="gap">
-                    <a href="http://www.meetup.com/AngularJS-OC/#suggested" class="button">Suggest a Meetup</a>
-                </div>
-            </div>
-        </div>
+<div class="row" ng-show="!events.length">
+  <div class="large-12 columns">
+    <div class="meetupdetails">
+      <h3>There are currently no upcoming events.</h3>
+      <div class="gap">
+        <a href="{{settings.social.meetup}}/#suggested" class="button">Suggest a Meetup</a>
+      </div>
     </div>
-    <div class="row" ng-repeat="event in events">
-        <div class="large-8 columns">
-            <div class="meetupdetails">
-                 <h4><a href="{{event.event_url}}" target="_blank">{{event.name}}</a></h4>
-                <span class="datetime">{{ event.time | date:'EEEE, MMMM d, y' }} at {{ event.time | date:'h:mm a' }}</span>
-                <span class="rsvps">{{event.yes_rsvp_count}} Attending, {{event.waitlist_count}} on Waitlist</span>
-                {{event.description | truncate}} <a href="{{event.event_url}}" target="_blank">Read More</a>
-            </div>
-        </div>
-        <div class="large-4 columns">
-            <div class="meetuplocation">
-                <h4>Location</h4>
-                <address>
-                {{event.venue.name}}<br />
-                {{event.venue.address_1}}<br />
-                {{event.venue.city}}, {{event.venue.state}}
-                </address>
-                <br />
-                <a class="button" href="https://maps.google.com/maps?daddr={{event.venue.name}},{{event.venue.address_1}}<,{{event.venue.city}},+{{event.venue.state}}" target="_blank">Get Directions</a>
-            </div>
-        </div>
+  </div>
+</div>
+<div class="row" ng-repeat="event in events">
+  <div class="large-7 columns">
+    <div class="meetupdetails">
+      <h4><a href="{{event.event_url}}" target="_blank">{{event.name}}</a></h4>
+      <span class="datetime">{{ event.time | date:'EEEE, MMMM d, y' }} at {{ event.time | date:'h:mm a' }}</span>
+      <span class="rsvps">{{event.yes_rsvp_count}} Attending, {{event.waitlist_count}} on Waitlist</span>
+      {{event.description | truncate:600}} <a href="{{event.event_url}}" target="_blank">Read More</a>
     </div>
+  </div>
+  <div class="large-5 columns">
+    <div class="meetuplocation" style="height: 350px">
+      <h4>Location</h4>
+      <address style="display: inline-block; margin-bottom: 1em;">
+        <strong ng-bind="event.venue.name"></strong> -
+        <span ng-bind="event.venue.address_1"></span>, <span ng-bind="event.venue.city"></span>
+      </address>
+      <div event-map id="map-for-event-{{event.id}}" event="event" class="event-map"></div>
+      <a class="button" href="https://maps.google.com/maps?daddr={{event.venue.name}},{{event.venue.address_1}}<,{{event.venue.city}},+{{event.venue.state}}" target="_blank">Get Directions</a>
+    </div>
+  </div>
+</div>
