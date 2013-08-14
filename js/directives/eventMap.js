@@ -7,7 +7,9 @@
       },
       link: function(scope, el, attrs) {
         google.maps.visualRefresh = true;
-        var map, address = [scope.event.venue.address_1, scope.event.venue.city, scope.event.venue.state].join(',');
+
+        var map,
+          address = [scope.event.venue.address_1, scope.event.venue.city, scope.event.venue.state].join(',');
 
         attrs.$observe('id', function(val) {
           var mapOptions = {
@@ -20,7 +22,6 @@
         });
 
         geoService.geocodeAddress(address).then(function(loc) {
-          console.log('done geocoding', loc);
           map.setCenter(new google.maps.LatLng(loc.lat, loc.lon));
         });
       }

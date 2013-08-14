@@ -2576,5 +2576,6 @@ nav.top-bar.expanded, .top-bar-section ul, .top-bar-section ul li > a {
 
 .event-map {
   width: 100%;
-  height: 100%;
+  height: 65%;
+  margin-bottom: 1em;
 }
