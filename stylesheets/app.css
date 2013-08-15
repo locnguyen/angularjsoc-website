@@ -2522,6 +2522,7 @@ nav.top-bar.expanded, .top-bar-section ul, .top-bar-section ul li > a {
 
 /* line 214, ../sass/app.scss */
 .meetuplocation {
+  height: 100%;
   @extent .box;
   padding: 0.625em 0.625em 0;
   background-color: #ff7900;

@@ -216,6 +216,7 @@ nav.top-bar.expanded, .top-bar-section ul, .top-bar-section ul li > a {
 	border-top: 4px solid #fff;
 }
 .meetuplocation {
+    height: 100%;
 	@extent .box;
 	padding: emCalc(10) emCalc(10) 0;
 	background-color: $color2;
