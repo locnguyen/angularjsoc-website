@@ -18,7 +18,7 @@ angularjsOC.settings = {
   }
 };
 
-angularjsOC.app = angular.module('angularjsOC', []);
+angularjsOC.app = angular.module('angularjsOC', ['ngRoute']);
 
 angularjsOC.app.value('settings', angularjsOC.settings);
 
