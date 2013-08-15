@@ -18,11 +18,11 @@ angularjsOC.settings = {
   }
 };
 
-angularjsOC.app = angular.module('angularjsOC', ['ngRoute']);
+angularjsOC.app = angular.module('angularjsOC', ['ngRoute', 'angularytics']);
 
 angularjsOC.app.value('settings', angularjsOC.settings);
 
-angularjsOC.app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+angularjsOC.app.config(['$routeProvider', '$locationProvider', 'AngularyticsProvider', function($routeProvider, $locationProvider, AngularyticsProvider) {
   $routeProvider.
     when('/', { templateUrl: '/partials/index.html' }).
     when('/getinvolved', { templateUrl: '/partials/getinvolved.html' }).
@@ -32,7 +32,13 @@ angularjsOC.app.config(['$routeProvider', '$locationProvider', function($routePr
     otherwise({ redirectTo: '/' });
 
     $locationProvider.html5Mode(true).hashPrefix('!');
+
+    AngularyticsProvider.setEventHandlers(['Console', 'Google']);
 }]);
+
+angularjsOC.app.run(function(Angularytics) {
+  Angularytics.init();
+});
 
 angularjsOC.app
     .filter('removehtml', function () {
