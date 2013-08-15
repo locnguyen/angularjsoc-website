@@ -22,15 +22,16 @@ angularjsOC.app = angular.module('angularjsOC', []);
 
 angularjsOC.app.value('settings', angularjsOC.settings);
 
-angularjsOC.app.config(['$routeProvider', function($routeProvider) {
+angularjsOC.app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
   $routeProvider.
     when('/', { templateUrl: '/partials/index.html' }).
     when('/getinvolved', { templateUrl: '/partials/getinvolved.html' }).
     when('/about', { templateUrl: '/partials/about.html' }).
-    when('/announcements', { templateUrl: '/partials/announcements.html' }).
     when('/presentations', { templateUrl: '/partials/presentations.html' }).
     when('/contact', { templateUrl: '/partials/contact.html' }).
     otherwise({ redirectTo: '/' });
+
+    $locationProvider.html5Mode(true).hashPrefix('!');
 }]);
 
 angularjsOC.app
