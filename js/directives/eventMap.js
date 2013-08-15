@@ -22,7 +22,15 @@
         });
 
         geoService.geocodeAddress(address).then(function(loc) {
-          map.setCenter(new google.maps.LatLng(loc.lat, loc.lon));
+          var eventLocation = new google.maps.LatLng(loc.lat, loc.lon);
+          map.setCenter(eventLocation);
+
+          var locationMarker = new google.maps.Marker({
+            position: eventLocation,
+            title: scope.event.venue.name
+          });
+
+          locationMarker.setMap(map);
         });
       }
     }
