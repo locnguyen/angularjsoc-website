@@ -62,6 +62,11 @@ angularjsOC.app
             }
 
         }
+    })
+    .filter('escape', function() {
+      return function(text) {
+        return encodeURIComponent(text);
+      }
     });
 
 angularjsOC.app.directive('foundation', [function() {

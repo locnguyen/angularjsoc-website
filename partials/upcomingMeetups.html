@@ -2,6 +2,7 @@
   <div class="large-12 columns">
     <div class="meetupdetails">
       <h3>There are currently no upcoming events.</h3>
+
       <div class="gap">
         <a href="{{settings.social.meetup}}/#suggested" class="button">Suggest a Meetup</a>
       </div>
@@ -11,22 +12,27 @@
 <div class="row" ng-repeat="event in events" match-height data-event-id="{{event.id}}">
   <div class="large-7 columns" height-watch>
     <div class="meetupdetails">
-      <h4><a href="{{event.event_url}}" target="_blank">{{event.name}}</a></h4>
-      <span class="datetime">{{ event.time | date:'EEEE, MMMM d, y' }} at {{ event.time | date:'h:mm a' }}</span>
-      <span class="rsvps">{{event.yes_rsvp_count}} Attending, {{event.waitlist_count}} on Waitlist</span>
-      {{event.description | truncate:350}} <a href="{{event.event_url}}" target="_blank">Read More</a>
+      <h4><a href="{{event.event_url}}" target="_blank" ng-bind="event.name"></a></h4>
+      <span class="datetime">
+        <span ng-bind="event.time | date:'EEEE, MMMM d, y'"></span> at <span
+              ng-bind="event.time | date:'h:mm a'"></span>
+      </span>
+      <span class="rsvps"><span ng-bind="event.yes_rsvp_count"></span> Attending, <span
+              ng-bind="event.waitlist_count"></span> on Waitlist</span>
+      <span ng-bind="event.description | truncate:350"></span> <a href="{{event.event_url}}" target="_blank">Read
+      More</a>
     </div>
   </div>
   <div class="large-5 columns" height-watch>
     <div class="meetuplocation">
-      <h4>Location</h4>
+      <h4>Venue</h4>
       <address style="display: inline-block; margin-bottom: 1em;">
         <strong ng-bind="event.venue.name"></strong> -
-        <span ng-bind="event.venue.address_1"></span>, <span ng-bind="event.venue.city"></span>
+        <a href="https://maps.google.com/maps?q={{event.venue.address_1|escape}},{{event.venue.city|escape}},{{event.venue.state|escape}}" target="_blank">
+          <span ng-bind="event.venue.address_1"></span>, <span ng-bind="event.venue.city"></span>
+        </a>
       </address>
       <div event-map id="map-for-event-{{event.id}}" event="event" class="event-map"></div>
     </div>
-
-    <!--<a class="button" href="https://maps.google.com/maps?daddr={{event.venue.name}},{{event.venue.address_1}}<,{{event.venue.city}},+{{event.venue.state}}" target="_blank">Get Directions</a>-->
   </div>
 </div>
