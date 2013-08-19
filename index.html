@@ -25,25 +25,25 @@
     ga('send', 'pageview');
   </script>
 </head>
-<body>
+<body role="application">
   <div id="wrapper">
     <header>
         <div ng-cloak ng-include src="'/partials/header.html'" onload="loadfoundation()"></div>
     </header>
     <div id="main-content">
-      <div class="row">
+      <div class="row" role="banner">
         <div class="large-8 small-8 columns">
-          <h1><a href="/#/"><img src="images/logo.jpg" alt="AngularJS OC Logo"></a> AngularJS <span class="orange">OC</span></h1>
+          <h1><a href="/"><img src="images/logo.jpg" alt="AngularJS OC Logo"></a> AngularJS <span class="orange">OC</span></h1>
         </div>
         <div class="large-3 small-3 columns">
           <a href="http://www.meetup.com/AngularJS-OC/" class="button right">Join Us</a>
         </div>
       </div>
-      <div ng-view></div>
+      <div ng-view role="main"></div>
       <div class="push"></div>
     </div>
   </div>
-  <footer>
+  <footer role="contentinfo">
     <div ng-cloak ng-include="'/partials/footer.html'"></div>
   </footer>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
