@@ -5,6 +5,7 @@ var angularjsOC = angularjsOC || {};
 angularjsOC.settings = {
   contact: 'angularjsoc@gmail.com',
   googleApiKey: 'AIzaSyDKBBD3LJwwgWInHsE3zG7NK5-TkQ9u_ok',
+  trelloApiKey: 'efdb13875d22825e117d1c6518fa5739',
   location: {
     lat: '33.7400016784668',
     lon: '-117.81999969482422'
@@ -60,7 +61,6 @@ angularjsOC.app
             else {
                 return String(text).replace(/<\/?([a-z][a-z0-9]*)\b[^>]*>/gi, '').substring(0, length-end.length) + end;
             }
-
         }
     })
     .filter('escape', function() {
