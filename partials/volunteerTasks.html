@@ -1,15 +1,40 @@
-<div class="row">
-    <div class="large-4 columns">
-        <div class="panel" ng-repeat="task in tasks">
-            <span ng-bind="task.name"></span>
+<div>
+    <div class="row">
+        <div class="large-12 columns">
+            <p><a href="{{settings.trello.url}}" target="_blank"><img
+                    src="/images/featured-tech-logos/trello-logo-sm.png"></a></p>
+
+            <p>Take a look at our public <a href="{{settings.trello.url}}" target="_blank">Trello board</a> to see how
+                you can help out.</p>
         </div>
     </div>
 
-    <div class="large-4 columns">
+    <div class="row">
+        <div class="large-4 columns">
+            <h3>Ideas</h3>
 
-    </div>
+            <div class="panel" ng-repeat="idea in ideas">
+                <a ng-bind="idea.name" href="{{idea.url}}" target="_blank"></a>
+                <span ng-show="idea.badges.comments > 1" class="trello-comment-count">(<span ng-bind="idea.badges.comments"></span> comments)</span>
+            </div>
+        </div>
 
-    <div class="large-4 columns">
+        <div class="large-4 columns">
+            <h3>Todo</h3>
 
+            <div class="panel" ng-repeat="todo in todos">
+                <a ng-bind="todo.name" href="{{todo.url}}" target="_blank"></a>
+                <span ng-show="todo.badges.comments > 1" class="trello-comment-count">(<span ng-bind="todo.badges.comments"></span> comments)</span>
+            </div>
+        </div>
+
+        <div class="large-4 columns">
+            <h3>Doing</h3>
+
+            <div class="panel" ng-repeat="doing in doings">
+                <a ng-bind="doing.name" href="{{doing.url}}" target="_blank"></a>{{doing.comments}}
+                <span ng-show="doing.badges.comments > 1" class="trello-comment-count">(<span ng-bind="doing.badges.comments"></span> comments)</span>
+            </div>
+        </div>
     </div>
 </div>

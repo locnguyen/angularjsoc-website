@@ -2580,3 +2580,7 @@ nav.top-bar.expanded, .top-bar-section ul, .top-bar-section ul li > a {
   height: 65%;
   margin-bottom: 1em;
 }
+
+.trello-comment-count {
+    font-size: smaller;
+}

@@ -1,12 +1,14 @@
-(function() {
-    angularjsOC.app.directive('volunteerTasks', ['trelloService', function(trelloService) {
-        return {
-            restrict: 'EA',
-            replace: false,
-            templateUrl: '/partials/volunteerTasks.html',
-            link: function(scope, el, attrs) {
-                scope.tasks = trelloService.todos();
-            }
-        }
-    }]);
+(function () {
+  angularjsOC.app.directive('volunteerTasks', ['trelloService', 'settings', function (trelloService, settings) {
+    return {
+      restrict: 'EA',
+      replace: false,
+      templateUrl: '/partials/volunteerTasks.html',
+      link: function (scope, el, attrs) {
+        scope.ideas = trelloService.ideas();
+        scope.todos = trelloService.todos();
+        scope.doings = trelloService.doings();
+      }
+    }
+  }]);
 }());
