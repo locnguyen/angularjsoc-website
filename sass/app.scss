@@ -63,177 +63,181 @@ $fontstack: 'Open Sans', Helvetica Neue, Arial, Sans-serif;
 // @import "foundation/components/dropdown";
 
 html, body {
-	height: 100%;
+  height: 100% !important;
 }
 a {
-	color: $color3;
+  color: $color3;
 }
 a:hover {
-	color: darken($color3, 20%);
+  color: darken($color3, 20%);
 }
 #wrapper {
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	position: relative;
-	margin-bottom: -150px;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  position: relative;
+  margin-bottom: -150px;
 }
-.push {
-	height: 200px;
+#main-content {
+  padding-bottom: 350px;
 }
 .top-bar-section ul {
-	margin-right: emCalc(20);
+  margin-right: emCalc(20);
 }
 footer {
-	position: absolute;
-	z-index: 99;
-	padding: 20px;
-	min-height: 150px;
-	width: 100%;
-	background-color: orange;
+  position: absolute;
+  z-index: 99;
+  bottom: 0;
+  padding: 20px;
+  min-height: 215px;
+  width: 100%;
+  background-color: orange;
 
-	.social {
-		line-height: 1;
-		li {
-		display: inline-block;
-		font-size: emCalc(30);
-		margin-left: emCalc(5);
-		}
-	}
+  .social {
+    line-height: 1;
+    li {
+      display: inline-block;
+      font-size: emCalc(30);
+      margin-left: emCalc(5);
+    }
+  }
 }
 
 .button {
-	@include button(0.75em, $color2)
+  @include button(0.75em, $color2)
 }
 .cf:before,
 .cf:after {
-    content: " "; 
-    display: table; 
+  content: " ";
+  display: table;
 }
 
 .cf:after {
-    clear: both;
+  clear: both;
 }
 
 
 body {
-	font-family: $fontstack;
+  font-family: $fontstack;
 }
 h1, h2, h3, h4, h5, h6 {
-	font-family: $fontstack;
-	font-weight: 200;
+  font-family: $fontstack;
+  font-weight: 200;
 }
 nav.top-bar, .top-bar-section li a:not(.button){
-	background-color: #555;
+  background-color: #555;
 }
 nav.top-bar.expanded, .top-bar-section ul, .top-bar-section ul li > a {
-	background-color: #555;
+  background-color: #555;
 }
 .top-bar-section ul li > a:hover {
-	background-color: #888;
+  background-color: #888;
 }
 .top-bar-section ul li > a.active {
-    background-color: #c5c5c5;
+  background-color: #c5c5c5;
 }
 
 .orange {
-	color: $color2;
+  color: $color2;
 }
 .box {
-	padding: 0 emCalc(20) 2.5em emCalc(20);
-	color: #fff;
-	line-height: 1.8em;
-	position: relative;
-	h2 {
-		color: #fff;
-		margin: 0 0 emCalc(2);
-	}
+  padding: 0 emCalc(20) 2.5em emCalc(20);
+  color: #fff;
+  line-height: 1.8em;
+  position: relative;
+  h2 {
+    color: #fff;
+    margin: 0 0 emCalc(2);
+  }
 }
 .box1 {
-	@extend .box;
-	background: #c5c5c5;
+  @extend .box;
+  background: #c5c5c5;
 }
 .box2 {
-	@extend .box;
-	background: #ff7900;
+  @extend .box;
+  background: #ff7900;
 }
 .box3 {
-	@extend .box;
-	background: #dd1b15;
+  @extend .box;
+  background: #dd1b15;
 }
 .highlights h2 + i {
-	font-size: emCalc(40);
-	float: right;
-	color: #646464;
-	margin: emCalc(5);
+  font-size: emCalc(40);
+  float: right;
+  color: #646464;
+  margin: emCalc(5);
 }
 .hl1, .hl2, .hl3 {
-	padding-bottom: emCalc(2);
+  padding-bottom: emCalc(2);
 }
 .hl1 {
-	border-bottom: emCalc(3) solid $color1;
+  border-bottom: emCalc(3) solid $color1;
 }
 .hl2 {
-	border-bottom: emCalc(3) solid $color2;
+  border-bottom: emCalc(3) solid $color2;
 }
 .hl3 {
-	border-bottom: emCalc(3) solid $color3;
+  border-bottom: emCalc(3) solid $color3;
 }
 .highlights .hl1 + i {
-	color: $color1;
+  color: $color1;
 }
 .highlights .hl2 + i {
-	color: $color2;
+  color: $color2;
 }
 .highlights .hl3 + i {
-	color: $color3;
+  color: $color3;
 }
 .gap {
-	margin-top: emCalc(30);
+  margin-top: emCalc(30);
 }
 section h2 {
-	margin: 0.5em 0 0;
+  margin: 0.5em 0 0;
 }
 .meetupdetails {
-	@extend .box;
-	padding: emCalc(10);
-	background-color: $color1;
-	.datetime, .rsvps {
-		font-size: 0.85em;
-		color: black;
-		display: block;
-		line-height: 1em;
-		margin: 0 0 0.25em;
-		padding-left: emCalc(5);
-		border-left: emCalc(10) solid darken($color1, 10%);
-	}
-	.datetime {
-		font-weight: bold;
-	}
-	h4 {
-		margin: 0;
-	}
-	border-top: 4px solid #fff;
+  @extend .box;
+  padding: emCalc(10);
+  background-color: $color1;
+  .datetime, .rsvps {
+    font-size: 0.85em;
+    color: black;
+    display: block;
+    line-height: 1em;
+    margin: 0 0 0.25em;
+    padding-left: emCalc(5);
+    border-left: emCalc(10) solid darken($color1, 10%);
+  }
+  .datetime {
+    font-weight: bold;
+  }
+  h4 {
+    margin: 0;
+  }
+  border-top: 4px solid #fff;
 }
 .meetuplocation {
-    height: 100%;
-	@extent .box;
-	padding: emCalc(10) emCalc(10) 0;
-	background-color: $color2;
-	h4 {
-		margin: 0 0 0.25em;
-		color: #fff;
-	}
-	border-bottom: emCalc(5) solid $color3;
-	.button {
-		@include button(0.75em, $color3)
-	}
+  height: 100%;
+@extent .box;
+  padding: emCalc(10) emCalc(10) 0;
+  background-color: $color2;
+  h4 {
+    margin: 0 0 0.25em;
+    color: #fff;
+  }
+  border-bottom: emCalc(5) solid $color3;
+  .button {
+    @include button(0.75em, $color3)
+  }
 }
 
-@media #{$small} { 
-	.meetuplocation {
-		border-top: 4px solid #fff;
-	}
+@media #{$small} {
+  .meetuplocation {
+    border-top: 4px solid #fff;
+  }
+  #main-content {
+    padding-bottom: 250px;
+  }
 }
 
 .ng-cloak {
