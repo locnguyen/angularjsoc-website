@@ -78,6 +78,11 @@ a:hover {
   position: relative;
   margin-bottom: -150px;
 }
+
+header {
+  background-color: #555;
+  margin-bottom: emCalc(30);
+}
 #main-content {
   padding-bottom: 350px;
 }
@@ -136,7 +141,9 @@ nav.top-bar.expanded, .top-bar-section ul, .top-bar-section ul li > a {
 .top-bar-section ul li > a.active {
   background-color: #c5c5c5;
 }
-
+.top-bar {
+  margin-bottom: 0;
+}
 .orange {
   color: $color2;
 }
