@@ -2,7 +2,7 @@ angularjsOC.app.directive('upcomingMeetups', ['meetupService', function(meetupSe
     return {
         restrict: 'EA',
         replace: false,
-        templateUrl: '/partials/upcomingMeetups.html',
+        templateUrl: 'views/upcomingMeetups.html',
         link: function(scope, el) {
             meetupService.getUpcoming().success(function(data) {
                 scope.events = data.results;

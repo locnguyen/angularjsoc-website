@@ -1,22 +1,9 @@
-*.gem
-*.rbc
-.bundle
-.config
-config.rb
-coverage
-InstalledFiles
-lib/bundler/man
-pkg
-rdoc
-spec/reports
-test/tmp
-test/version_tmp
-tmp
+node_modules
+dist
+.tmp
+.sass-cache
+app/bower_components
 
-# YARD artifacts
-.yardoc
-_yardoc
-doc/
 
 
 .idea
