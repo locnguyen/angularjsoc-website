@@ -8,7 +8,7 @@
 // 'test/spec/**/*.js'
 
 module.exports = function (grunt) {
-
+    var modRewrite = require('connect-modrewrite');
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
 
@@ -59,7 +59,7 @@ module.exports = function (grunt) {
       options: {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
-        hostname: 'localhost',
+        hostname: '0.0.0.0',
         livereload: 35729
       },
       livereload: {
@@ -68,7 +68,28 @@ module.exports = function (grunt) {
           base: [
             '.tmp',
             '<%= yeoman.app %>'
-          ]
+          ],
+            middleware: function (connect, options) {
+                var middlewares = [];
+                var directory = options.directory || options.base[options.base.length - 1];
+                if (!Array.isArray(options.base)) {
+                    options.base = [options.base];
+                }
+
+                middlewares.push(modRewrite([
+                    '!\\.html|\\.js|\\.css|\\.png|\\.jpg$ /index.html [L]'
+                ]));
+
+                options.base.forEach(function (base) {
+                    // Serve static files.
+                    middlewares.push(connect.static(base));
+                });
+
+                // Make directory browse-able.
+                middlewares.push(connect.directory(directory));
+
+                return middlewares;
+            }
         }
       },
       test: {
