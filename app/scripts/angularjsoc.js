@@ -34,6 +34,7 @@ angularjsOC.app.config(['$routeProvider', '$locationProvider', function ($routeP
       when('/about', { templateUrl: 'views/about.html' }).
       when('/presentations', { templateUrl: 'views/presentations.html' }).
       when('/contact', { templateUrl: 'views/contact.html' }).
+      when('/sponsorship', { templateUrl: 'views/sponsorship.html' }).
       otherwise({ redirectTo: '/' });
 
   $locationProvider.html5Mode(true).hashPrefix('!');
