@@ -2,7 +2,7 @@
 
 var angularjsOC = angularjsOC || {};
 
-angularjsOC.app = angular.module('angularjsOC', ['angulartics', 'angulartics.google.analytics', 'ngRoute']);
+angularjsOC.app = angular.module('angularjsOC', ['angulartics', 'angulartics.google.analytics', 'ui.router']);
 
 angularjsOC.app.constant('settings', {
     contact: 'angularjsoc@gmail.com',
@@ -27,17 +27,36 @@ angularjsOC.app.constant('settings', {
     }
 });
 
-angularjsOC.app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
-  $routeProvider.
-      when('/', { templateUrl: 'views/index.html' }).
-      when('/getinvolved', { templateUrl: 'views/getinvolved.html' }).
-      when('/about', { templateUrl: 'views/about.html' }).
-      when('/presentations', { templateUrl: 'views/presentations.html' }).
-      when('/contact', { templateUrl: 'views/contact.html' }).
-      when('/sponsorship', { templateUrl: 'views/sponsorship.html' }).
-      otherwise({ redirectTo: '/' });
-
+angularjsOC.app.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', function ($locationProvider, $stateProvider, $urlRouterProvider) {
   $locationProvider.html5Mode(true).hashPrefix('!');
+
+  $stateProvider
+      .state('home', {
+          url: '/',
+          templateUrl: 'views/index.html'
+      })
+      .state('getinvolved', {
+          url: '/getinvolved',
+          templateUrl: 'views/getinvolved.html'
+      })
+      .state('about', {
+          url: '/about',
+          templateUrl: 'views/about.html'
+      })
+      .state('presentations', {
+          url: '/presentations',
+          templateUrl: 'views/presentations.html'
+      })
+      .state('contact', {
+          url: '/contact',
+          templateUrl: 'views/contact.html'
+      })
+      .state('sponsorship', {
+          url: '/sponsorship',
+          templateUrl: 'views/sponsorship.html'
+      });
+
+      $urlRouterProvider.otherwise('/')
 }]);
 
 angularjsOC.app
