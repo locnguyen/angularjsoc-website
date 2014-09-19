@@ -34,7 +34,7 @@
     <header>
         <div class="row">
             <div class="large-12 columns">
-                <div ng-cloak ng-include src="'views/header.html'" onload="loadfoundation()"></div>
+                <ui-view="header"></ui-view>
             </div>
         </div>
     </header>
@@ -47,10 +47,10 @@
                 <a href="http://www.meetup.com/AngularJS-OC/" class="button right">Join Us</a>
             </div>
         </div>
-        <div ui-view role="main"></div>
+        <div ui-view="main" role="main"></div>
     </div>
     <footer role="contentinfo">
-        <div ng-cloak ng-include="'views/footer.html'"></div>
+        <ui-view="footer"></footer>
     </footer>
 </div>
 

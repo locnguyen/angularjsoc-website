@@ -24,33 +24,58 @@ angularjsOC.app.config(['$locationProvider', '$stateProvider', '$urlRouterProvid
   $locationProvider.html5Mode(true).hashPrefix('!');
 
   $stateProvider
-      .state('home', {
+      .state('root', {
+          abstract: true,
+          views: {
+              'header': {
+                  templateUrl: 'views/header.html'
+              },
+              'footer': {
+                  templateUrl: 'views/footer.html'
+              }
+          }
+      })
+      .state('root.home', {
           url: '/',
-          templateUrl: 'views/index.html'
+          views: {
+              'main@': { templateUrl: 'views/index.html' }
+          }
       })
-      .state('getinvolved', {
+      .state('root.getinvolved', {
           url: '/getinvolved',
-          templateUrl: 'views/getinvolved.html'
+          views: {
+              'main@': { templateUrl: 'views/getinvolved.html' }
+          }
       })
-      .state('about', {
+      .state('root.about', {
           url: '/about',
-          templateUrl: 'views/about.html'
+          views: {
+             'main@': { templateUrl: 'views/about.html' }
+          }
       })
-      .state('presentations', {
+      .state('root.presentations', {
           url: '/presentations',
-          templateUrl: 'views/presentations.html'
+      views: {
+        'main@': { templateUrl: 'views/presentations.html' }
+      }
       })
-      .state('contact', {
+      .state('root.contact', {
           url: '/contact',
-          templateUrl: 'views/contact.html'
+          views: {
+            'main@': { templateUrl: 'views/contact.html' }
+          }
       })
-      .state('sponsorship', {
+      .state('root.sponsorship', {
           url: '/sponsorship',
-          templateUrl: 'views/sponsorship.html'
+          views: {
+            'main@': { templateUrl: 'views/sponsorship.html' }
+          }
       })
-      .state('policies', {
+      .state('root.policies', {
           url: '/policies',
-          templateUrl: 'views/policies.html'
+          views: {
+            'main@': { templateUrl: 'views/policies.html' }
+          }
       });
 
       $urlRouterProvider.otherwise('/');
