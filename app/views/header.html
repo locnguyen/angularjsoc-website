@@ -11,32 +11,37 @@
     <section class="top-bar-section right">
         <ul>
             <li>
-                <a href="/" ng-class="{'active': currentPage() == '/'}">
+                <a ui-sref="home" ui-sref-active="active">
                     home
                 </a>
             </li>
             <li>
-                <a href="/presentations" ng-class="{'active': currentPage() == '/presentations'}">
+                <a ui-sref="presentations" ui-sref-active="active">
                     presentations
                 </a>
             </li>
             <li>
-                <a href="/getinvolved" ng-class="{'active': currentPage() == '/getinvolved'}">
+                <a ui-sref="getinvolved" ui-sref-active="active">
                     get involved
                 </a>
             </li>
             <li>
-                <a href="/sponsorship" ng-class="{'active': currentPage() == '/sponsorship'}">
+                <a ui-sref="sponsorship" ui-sref-active="active">
                     sponsorship
                 </a>
             </li>
             <li>
-                <a href="/about" ng-class="{'active': currentPage() == '/about'}">
+                <a ui-sref="policies" ui-sref-active="active">
+                  policies
+                </a>
+            </li>
+            <li>
+                <a ui-sref="about" ui-sref-active="active">
                     about
                 </a>
             </li>
             <li>
-                <a href="/contact" ng-class="{'active': currentPage() == '/contact'}">
+                <a ui-sref="contact"  ui-sref-active="active">
                     contact
                 </a>
             </li>

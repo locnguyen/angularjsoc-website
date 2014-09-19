@@ -7,13 +7,6 @@ angularjsOC.app = angular.module('angularjsOC', ['angulartics', 'angulartics.goo
 angularjsOC.app.constant('settings', {
     contact: 'angularjsoc@gmail.com',
     googleApiKey: 'AIzaSyDKBBD3LJwwgWInHsE3zG7NK5-TkQ9u_ok',
-    trello: {
-        url: 'https://trello.com/b/R2epot1q/angularjs-oc',
-        apiKey: 'efdb13875d22825e117d1c6518fa5739',
-        ideaListId: '5218424dac7bc54327001565',
-        todoListId: '51d89227f4deb8010b000aca',
-        doingListId: '51d89227f4deb8010b000acb'
-    },
     location: {
         lat: '33.7400016784668',
         lon: '-117.81999969482422'
@@ -54,6 +47,10 @@ angularjsOC.app.config(['$locationProvider', '$stateProvider', '$urlRouterProvid
       .state('sponsorship', {
           url: '/sponsorship',
           templateUrl: 'views/sponsorship.html'
+      })
+      .state('policies', {
+          url: '/policies',
+          templateUrl: 'views/policies.html'
       });
 
       $urlRouterProvider.otherwise('/')

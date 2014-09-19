@@ -6,9 +6,6 @@ angularjsOC.app.controller('BaseController', ['$scope', '$location', 'meetupServ
     $(document).foundation();
   }
 
-  $scope.currentPage = function() {
-    return $location.path();
-  }
 
   meetupService.getGroupDetails().then(function(details) {
     $scope.groupDetails = details;
