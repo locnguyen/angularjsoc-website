@@ -47,7 +47,7 @@
                 <a href="http://www.meetup.com/AngularJS-OC/" class="button right">Join Us</a>
             </div>
         </div>
-        <div ng-view role="main"></div>
+        <div ui-view role="main"></div>
     </div>
     <footer role="contentinfo">
         <div ng-cloak ng-include="'views/footer.html'"></div>
@@ -63,6 +63,7 @@
 <script src="bower_components/lodash/dist/lodash.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="bower_components/angulartics/src/angulartics.js"></script>
 <script src="bower_components/angulartics/src/angulartics-ga.js"></script>
 <!-- endbuild -->
@@ -73,12 +74,10 @@
 <script src="scripts/controllers/BaseController.js"></script>
 <script src="scripts/services/meetupService.js"></script>
 <script src="scripts/services/geoService.js"></script>
-<script src="scripts/services/trelloService.js"></script>
 
 <script src="scripts/directives/upcomingMeetups.js"></script>
 <script src="scripts/directives/eventMap.js"></script>
 <script src="scripts/directives/foundation.js"></script>
-<script src="scripts/directives/volunteerTasks.js"></script>
 <script src="scripts/directives/twitterTimeline.js"></script>
 <!-- endbuild -->
 </body>
