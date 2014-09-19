@@ -53,7 +53,7 @@ angularjsOC.app.config(['$locationProvider', '$stateProvider', '$urlRouterProvid
           templateUrl: 'views/policies.html'
       });
 
-      $urlRouterProvider.otherwise('/')
+      $urlRouterProvider.otherwise('/');
 }]);
 
 angularjsOC.app
